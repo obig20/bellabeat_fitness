@@ -39,7 +39,7 @@ SELECT * FROM public.daily_activity LIMIT 5;
 -- 3. CREATE & IMPORT minute_sleep
 
 CREATE TABLE public.minute_sleep (
-    id      TEXT,           -- we know it's text from earlier
+    id      TEXT,           
     date    TEXT,
     value   INTEGER,
     logid   BIGINT
@@ -48,7 +48,7 @@ CREATE TABLE public.minute_sleep (
 
 
 -- Verify
-SELECT COUNT(*) AS minute_rows FROM public.minute_sleep;     -- expect ~200k+
+SELECT COUNT(*) AS minute_rows FROM public.minute_sleep;     
 SELECT * FROM public.minute_sleep LIMIT 5;
 
 -- 4. AGGREGATE minute_sleep → daily sleep hours
